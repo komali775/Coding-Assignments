@@ -1,0 +1,57 @@
+#1. Write a program to read text file 
+
+file = open("sample.txt", "r")
+content = file.read()
+file.close()
+print(content)
+
+''' sample.txt file
+Hello, this is a simple text file.
+Python makes file handling easy!
+'''
+#2. Write a program to write text to .txt file using  InputStream 
+
+file = open("output.txt", "w")  
+file.write(input("Enter text: "))  
+file.close()  
+print("Text written to output.txt")
+
+#3. Write a program to read a file stream 
+
+file = open("sample.txt", "r")
+print(file.read())
+file.close()
+
+#4. Write a program to read a file stream supports random access 
+
+with open("sample.txt", "r") as file:
+    lines = file.readlines()  
+
+print(lines[0].strip()) 
+print(lines[1].strip())
+
+print(lines[0][:5]) 
+
+#5. Write a program to read a file a just to a particular index using seek() 
+
+with open("sample.txt", "r") as file:
+    index = int(input()) 
+    file.seek(index)  
+    content = file.read() 
+    print(content)
+
+#6. Write a program to check whether a file is having read access and write access permissions
+
+import os
+
+filename = "sample.txt"
+
+if os.access(filename, os.R_OK):
+    print(f"'{filename}' has read access.")
+else:
+    print(f"'{filename}' does NOT have read access.")
+
+if os.access(filename, os.W_OK):
+    print(f"'{filename}' has write access.")
+else:
+    print(f"'{filename}' does NOT have write access.")
