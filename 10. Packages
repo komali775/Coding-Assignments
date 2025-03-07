@@ -5,23 +5,32 @@
 #1.4. Call each class by creating an object to it  
 #1.5. Create a program by all the above
 
-class ClassOne:
-    def __init__(self):
-        print("ClassOne Constructor Called!")
+#class_one.py
 
-    def method_one(self):
-        print("Method from ClassOne")
+class ClassOne:
+    def __init__(self, name):
+        self.name = name
+    def display(self):
+        print(f"ClassOne Name: {self.name}")
+
+#class_two.py
 
 class ClassTwo:
-    def __init__(self):
-        print("ClassTwo Constructor Called!")
+    def __init__(self, age):
+        self.age = age
+    def show(self):
+        print(f"ClassTwo Age: {self.age}")
 
-    def method_two(self):
-        print("Method from ClassTwo")
+#__init__.py
 
-if __name__ == "__main__":
-    obj1 = ClassOne()
-    obj1.method_one()
+from .class_one import ClassOne
+from .class_two import ClassTwo
 
-    obj2 = ClassTwo()
-    obj2.method_two()
+#main.py
+
+from my_package import ClassOne, ClassTwo
+obj1 = ClassOne("Komali")
+obj2 = ClassTwo(19)
+obj1.display()
+obj2.show()
+
