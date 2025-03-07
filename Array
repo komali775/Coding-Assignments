@@ -1,0 +1,147 @@
+#1. Write a function to add integer values of an array 
+
+numbers = [7, 31, 35, 43, 60]
+print("Sum of array:", sum(numbers))
+
+#2. Write a function to calculate the average value of an array of integers 
+
+numbers = [7, 31, 35, 43, 60]
+print("Average:", sum(numbers) / len(numbers))
+
+#3. Write a program to find the index of an array element 
+
+numbers = [7, 31, 35, 43, 60]
+
+element = int(input("Enter the number to find its index: "))
+
+if element in numbers:
+    print("Index of", element, "is", numbers.index(element))
+else:
+    print("Element not found in the array.")
+
+#4. Write a function to test if array contains a specific value 
+
+numbers = [38, 76, 49, 56, 61]
+element = int(input("Enter the number to check: "))
+print("Found" if element in numbers else "Not found")
+
+#5. Write a function to remove a specific element from an array 
+
+numbers = [13, 34, 56, 42, 86]
+element = int(input("Enter the number to remove: "))
+
+if element in numbers:
+    numbers.remove(element)
+
+print("Updated array:", numbers)
+
+#6. Write a function to copy an array to another array 
+
+def copy_array(arr):
+    return arr.copy()
+
+numbers = [7, 31, 35, 43, 60]
+copied_numbers = copy_array(numbers)
+
+print("Original array:", numbers)
+print("Copied array:", copied_numbers)
+
+#7. Write a function to insert an element at a specific position in the array
+
+numbers = [7, 31, 35, 43, 60]
+element = int(input("Enter the number to insert: "))
+position = int(input("Enter the position: "))
+
+numbers.insert(position, element)  
+print("Updated array:", numbers)
+
+#8. Write a function to find the minimum and maximum value of an array
+
+numbers = [78, 34, 56, 76, 35]
+print("Minimun:", min(numbers), "\nMaximum:", max(numbers))
+
+#9. Write a function to reverse an array of integer values 
+
+numbers = [56, 31, 98, 67, 72]
+print("Reversed array:", numbers[::-1])
+
+#10. Write a function to find the duplicate values of an array 
+
+numbers = [7, 31, 35, 43, 60, 31, 35, 7]
+print("Duplicates:", list(set(x for x in numbers if numbers.count(x) > 1)))
+
+#11. Write a program to find the common values between two arrays 
+
+arr1 = [7, 31, 35, 43, 60]
+arr2 = [35, 43, 50, 60, 70]
+
+common_values = [x for x in arr1 if x in arr2]
+print("Common values:", common_values)
+
+#12. Write a method to remove duplicate elements from an array 
+
+numbers = [13, 25, 32, 43, 51, 25, 32, 13]
+unique_numbers = []
+
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+
+print("Array without duplicates:", unique_numbers)
+
+#13. Write a method to find the second largest number in an array 
+
+numbers = [98, 74, 56, 45, 82]
+
+largest = second_largest = float('-inf')
+for num in numbers:
+    if num > largest:
+        second_largest, largest = largest, num  
+    elif num > second_largest and num != largest:
+        second_largest = num
+
+print("Second largest number:", second_largest)
+
+#14. Write a method to find the second largest number in an array 
+
+numbers = [31, 47, 63, 89, 13]
+
+largest = second_largest = float('-inf')
+for num in numbers:
+    if num > largest:
+        second_largest, largest = largest, num  
+    elif num > second_largest and num != largest:
+        second_largest = num
+
+print("Second largest number:", second_largest)
+
+#15. Write a method to find number of even number and odd numbers in an array 
+
+numbers = [10, 21, 32, 43, 54, 65, 76, 87]
+
+evens = [x for x in numbers if x % 2 == 0]
+odds = [x for x in numbers if x % 2 != 0]
+
+print("Even numbers:", len(evens))
+print("Odd numbers:", len(odds))
+
+#16. Write a function to get the difference of largest and smallest value 
+
+numbers = [7, 31, 35, 43, 60]
+print("Difference:", max(numbers) - min(numbers))
+
+#17. Write a method to verify if the array contains two specified elements(12,23) 
+
+numbers = [10, 12, 15, 23, 30]
+print(12 in numbers and 23 in numbers)
+
+#18. Write a program to remove the duplicate elements and return the new array 
+
+numbers = [67, 26, 37, 48, 52, 26, 37, 67]
+new_numbers = []
+
+for num in numbers:
+    if num not in new_numbers:
+        new_numbers.append(num)
+
+print(new_numbers)
