@@ -1,0 +1,132 @@
+#1. Different ways creating a string 
+
+# Using single quotes
+str1 = 'Komali'
+
+# Using double quotes
+str2 = "Komali"
+
+# Using triple quotes (for multi-line strings)
+str3 = '''Bojja
+Komali'''
+
+# Using str() function
+str4 = str(779)  # Converts number to string
+
+# Using join() method
+str5 = ''.join(['K', 'o', 'm', 'a', 'l', 'i'])
+
+# Using format() method
+str6 = "Bojja {}".format("Komali")
+
+# Using f-string (formatted string literals)
+name = "Komali"
+str7 = f"Bojja {name}"
+
+# Printing all strings
+print(str1, str2, str3, str4, str5, str6, str7, sep="\n")
+
+#2. Concatenating two strings using + operator 
+
+str1 = "Bojja"
+str2 = "Komali"
+
+result = str1 + " " + str2  
+
+print(result)
+
+#3. Finding the length of the string 
+
+text = "Bojja Komali"
+length = len(text) 
+
+print(length)
+
+#4. Extract a string using Substring 
+
+text = "Bojja Komali"
+substring = text[0:5]  
+
+print(substring)
+
+#5. Searching in strings using index() 
+
+text = "Bojja Komali"
+position = text.index("Komali")  
+
+print(position)
+
+#6. Matching a String Against a Regular Expression With matches() 
+
+text = "Bojja Komali"
+
+if "Bojja" in text: 
+    print("Match found!")
+else:
+    print("No match.")
+
+#7. Comparing strings  
+
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+if str1 == str2:
+    print("Strings are equal")
+else:
+    print("Strings are not equal")
+
+#8. startsWith(), endsWith() and compareTo() 
+
+text = "Hello World"
+print(text.startswith("Hello"))
+print(text.endswith("World"))
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+if str1 == str2:
+    print("Strings are equal")
+else:
+    print("Strings are not equal")
+
+#9. Trimming strings with strip() 
+
+text = input("Enter a string with spaces: ")
+
+trimmed_text = text.strip() 
+
+print("Before trimming:", repr(text))
+print("After trimming:", repr(trimmed_text))
+
+#10. Replacing characters in strings with replace() 
+
+text = input("Enter a string: ")
+old = input("Enter the string to be replaced: ")
+new = input("Enter the new string: ")
+
+modified_text = text.replace(old, new)
+
+print("Modified string:", modified_text)
+
+#11. Splitting strings with split() 
+
+text = input("Enter a sentence: ")
+
+words = text.split()  
+
+print("Split words:", words)
+
+#12. Converting integer objects to Strings 
+
+num = int(input("Enter an integer: "))
+
+num_str = str(num)  
+print("Converted string:", num_str)
+print("Type of num_str:", type(num_str))
+
+#13. Converting to uppercase and lowercase
+
+num = int(input("Enter an integer: "))
+
+num_str = str(num)  
+print("Converted string:", num_str)
+print("Type of num_str:", type(num_str))
