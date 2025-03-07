@@ -1,0 +1,35 @@
+# 1.Write a program to print your name.
+
+print("Bojja Harshini Naga Komali")
+
+# 2.Write a program for a Single line comment and multi-line comments
+
+# This is a single-line comment
+"""
+This is a multi-line comment.
+It spans multiple lines.
+Python ignores these lines during execution.
+"""
+print("Comments in Python")
+
+# 3.Define variables for different Data Types int, Boolean, char, float, double and print on the Console. 
+
+integer_var = 77         
+boolean_var = False       
+char_var = 'K'           
+float_var = 79.5         
+double_var = 97.12349  
+print("Integer:", integer_var)
+print("Boolean:", boolean_var)
+print("Character:", char_var)
+print("Float:", float_var)
+print("Double:", double_var)
+
+# 4.Define the local and Global variables with the same name and print both variables and understand the scope of the variables 
+
+x = 31 
+def my_function():
+    x = 7  
+    print("Inside function:", x)
+my_function()
+print("Outside function:", x)
