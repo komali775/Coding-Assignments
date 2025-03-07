@@ -1,0 +1,82 @@
+#1. Create an abstract class with abstract and non-abstract methods. 
+
+from abc import ABC, abstractmethod
+
+class A(ABC):  
+    @abstractmethod
+    def show(self):  
+        pass
+
+    def display(self):  
+        print("This is a non-abstract method.")
+
+class B(A):  
+    def show(self):  
+        print("Abstract method implemented.")
+
+obj = B()
+obj.show()    
+obj.display()  
+
+#2. Create a sub class for an abstract class. Create an object in the child class for the abstract class and access the non-abstract methods 
+
+from abc import ABC, abstractmethod
+
+class AbstractClass(ABC):
+    def __init__(self):
+        self.value = 10  
+    
+    @abstractmethod
+    def abstract_method(self):
+        pass
+    
+    def non_abstract_method(self):
+        return f"Non-abstract method: {self.value}"
+
+class SubClass(AbstractClass):
+    def abstract_method(self):
+        return "Implemented abstract method in SubClass"
+    
+    def access_abstract_class(self):
+        obj = super()
+        print(obj.non_abstract_method()) 
+
+sub_obj = SubClass()
+sub_obj.access_abstract_class()
+
+#3. Create an instance for the child class in child class and call abstract methods 
+from abc import ABC, abstractmethod
+
+class Parent(ABC):
+    @abstractmethod
+    def show(self):
+        pass
+
+class Child(Parent):
+    def show(self):
+        print("Abstract method implemented in Child class")
+
+    def create_instance_and_call(self):
+        instance = Child()  
+        instance.show()  
+
+child_obj = Child()
+child_obj.create_instance_and_call()
+
+#4. Create an instance for the child class in child class and call non-abstract methods
+
+class Parent:
+    def display(self):
+        print("This is a non-abstract method from the Parent class")
+
+class Child(Parent):
+    def greet(self):
+        print("This is a non-abstract method from the Child class")
+
+    def create_instance_and_call(self):
+        instance = Child()  
+        instance.display() 
+        instance.greet()
+        
+child_obj = Child()
+child_obj.create_instance_and_call()
